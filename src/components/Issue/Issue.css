@@ -1,0 +1,24 @@
+.issue {
+  position: relative;
+  overflow: hidden; }
+  .issue:hover > .issue__metadata {
+    opacity: 1; }
+  .issue:hover > .issue__cover {
+    filter: blur(2px);
+    transform: scale(1.1); }
+  .issue__cover {
+    display: block;
+    width: 100%;
+    transition: transform 0.2s; }
+  .issue__metadata {
+    opacity: 0;
+    transition: opacity 0.2s;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(21, 21, 21, 0.6);
+    padding: 1rem; }
+  .issue__title {
+    color: #fff; }
