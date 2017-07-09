@@ -1,10 +1,12 @@
 import React from 'react';
 import './SearchBar.css';
 
+import MainSearch from '../MainSearch/MainSearch';
+
 export default () => {
     return (
         <div className="search-bar">
-            <input type="search" className="search-bar__input" placeholder="SEARCH" />
+            <MainSearch className="search-bar__input" />
         </div>
     )
 }

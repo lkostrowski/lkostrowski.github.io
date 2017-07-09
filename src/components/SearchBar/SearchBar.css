@@ -3,9 +3,4 @@
   height: 6rem; }
   .search-bar__input {
     height: 100%;
-    width: 100%;
-    background-color: transparent;
-    font-size: 3rem;
-    border: none;
-    text-align: center;
-    color: #fff; }
+    width: 100%; }

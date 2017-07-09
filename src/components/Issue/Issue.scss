@@ -3,6 +3,7 @@
 .issue {
     position: relative;
     overflow: hidden;
+    cursor: pointer;
 
     &:hover {
         & > .issue__metadata {
