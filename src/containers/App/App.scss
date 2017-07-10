@@ -1,26 +1,5 @@
 @import "../../utils/colors.scss";
 
 .app {
-    display: flex;
-    background-color: $colorBg;
-    min-height: 100vh;
 
-    &__sidebar {
-        width: 30rem;
-        flex: 0 0 30rem;
-        background: $colorBlack;
-    }
-
-    &__main {
-        flex-grow: 1;
-
-    }
-
-    &__content {
-        padding: 4rem;
-        max-height: calc(100vh - 6rem);
-        overflow: scroll;
-        position: relative;
-
-    }
 }

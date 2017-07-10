@@ -3,7 +3,7 @@ import propTypes from 'prop-types';
 import classNames from 'class-names';
 import './FilterAccordion.css';
 
-export default class FilterAccordion extends React.Component {
+class FilterAccordion extends React.Component {
     constructor(props) {
         super(props);
 
@@ -62,7 +62,7 @@ export default class FilterAccordion extends React.Component {
     }
 }
 
-FilterAccordion.PropTypes = {
+FilterAccordion.propTypes = {
     isOpen: propTypes.bool,
     bar: propTypes.element.isRequired,
     content: propTypes.element.isRequired,
@@ -70,3 +70,5 @@ FilterAccordion.PropTypes = {
     onClose: propTypes.func,
     onChange: propTypes.func
 };
+
+export default FilterAccordion;

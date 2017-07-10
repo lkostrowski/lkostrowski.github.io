@@ -1,0 +1,37 @@
+@import "../../utils/colors.scss";
+
+.shelf {
+    display: flex;
+    background-color: $colorBg;
+    min-height: 100vh;
+
+    &__sidebar {
+        width: 30rem;
+        flex: 0 0 30rem;
+        background: $colorBlack;
+    }
+
+    &__main {
+        flex-grow: 1;
+        position: relative;
+
+        &::after {
+            position: fixed;
+            bottom: 0;
+            height: 10rem;
+            pointer-events: none;
+            background: linear-gradient(to top, $colorBg 0%, rgba($colorBg, 0.999) 20%, rgba($colorBg, 0) 100%);
+            left: 30rem;
+            content: '';
+            width: 100%;
+        }
+
+    }
+
+    &__content {
+        padding: 4rem;
+        max-height: calc(100vh - 6rem);
+        overflow: scroll;
+
+    }
+}

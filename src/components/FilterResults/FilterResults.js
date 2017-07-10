@@ -1,13 +1,25 @@
 import React from 'react';
+import propTypes from 'prop-types';
+import IconPlus from '../Icons/IconPlus'
 
 import './FilterResults.css';
 
 
-export default ({items}) => {
-    function renderItem (item, i) {
+const FilterResults = ({ items, onChange = () => {} }) => {
+    function getItemClass(item) {
+        return item.selected ? 'filter-results__item filter-results__item--selected' : 'filter-results__item';
+    }
+
+    function clickHandler(event, item) {
+        onChange(item);
+    }
+
+    function renderItem(item, i) {
         return (
-            <li className="filter-results__item" key={i}>
-                <span className="filter-results__label">{item}</span>
+            <li onClick={e => clickHandler(e, item)} className={getItemClass(item)} key={i}>
+                <span className="filter-results__label">{item.label}</span>
+
+                {item.selected && <IconPlus x={true} fill="inherit"/>}
 
             </li>
         )
@@ -20,4 +32,16 @@ export default ({items}) => {
             ))}
         </ul>
     )
-}
+};
+
+FilterResults.propTypes = {
+    items: propTypes.arrayOf(propTypes.shape({
+        label: propTypes.string.isRequired,
+        id: propTypes.string.isRequired,
+        selected: propTypes.bool
+    })).isRequired,
+    onChange: propTypes.func
+
+};
+
+export default FilterResults;

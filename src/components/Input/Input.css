@@ -1,0 +1,14 @@
+.input {
+  background-color: #fff; }
+  .input__field {
+    display: block;
+    width: 100%;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    height: 5rem;
+    font-size: 2rem;
+    padding: 1rem;
+    color: #1c1c1c; }
+    .input__field::-webkit-input-placeholder {
+      color: #495154; }

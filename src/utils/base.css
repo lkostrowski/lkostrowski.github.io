@@ -8,6 +8,11 @@
   src: url("../assets/fonts/now/Now-Bold.otf") format("otf");
   font-weight: 700; }
 
+@font-face {
+  font-family: "Now";
+  src: url("../assets/fonts/now/Now-Medium.otf") format("otf");
+  font-weight: 500; }
+
 html {
   font-size: 10px; }
 

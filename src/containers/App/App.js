@@ -1,23 +1,24 @@
 import React, {Component} from 'react';
 import './App.css';
-import Sidebar from "../../components/Sidebar/Sidebar";
-import IssuesList from "../../components/IssuesList/IssuesList";
-import SearchBar from "../../components/SearchBar/SearchBar";
+
+import Shelf from "../Shelf/Shelf";
+import IssueView from "../IssueView/IssueView";
+
+import {
+    BrowserRouter as Router,
+    Route
+} from 'react-router-dom';
 
 class App extends Component {
     render() {
         return (
-            <div className="app">
-                <div className="app__sidebar">
-                    <Sidebar />
+            <Router>
+                <div className="app">
+                    <Route exact path="/" component={Shelf}/>
+                    <Route path="/issue/:id" component={IssueView}/>
                 </div>
-                <div className="app__main">
-                    <SearchBar/>
-                    <div className="app__content">
-                        <IssuesList/>
-                    </div>
-                </div>
-            </div>
+            </Router>
+
         );
     }
 }

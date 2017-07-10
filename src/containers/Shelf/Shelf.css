@@ -1,0 +1,24 @@
+.shelf {
+  display: flex;
+  background-color: #202d39;
+  min-height: 100vh; }
+  .shelf__sidebar {
+    width: 30rem;
+    flex: 0 0 30rem;
+    background: #151515; }
+  .shelf__main {
+    flex-grow: 1;
+    position: relative; }
+    .shelf__main::after {
+      position: fixed;
+      bottom: 0;
+      height: 10rem;
+      pointer-events: none;
+      background: linear-gradient(to top, #202d39 0%, rgba(32, 45, 57, 0.999) 20%, rgba(32, 45, 57, 0) 100%);
+      left: 30rem;
+      content: '';
+      width: 100%; }
+  .shelf__content {
+    padding: 4rem;
+    max-height: calc(100vh - 6rem);
+    overflow: scroll; }

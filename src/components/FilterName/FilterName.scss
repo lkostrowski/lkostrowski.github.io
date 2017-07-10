@@ -3,7 +3,7 @@
 .filter-name {
     background-color: $colorBlack;
     color: $colorGrayLighter;
-    padding: 0 4rem;
+    padding: 0 3rem;
     fill: $colorGrayLighter;
     display: flex;
     justify-content: space-between;
@@ -14,13 +14,13 @@
         background: $colorGrayLight;
         color: $colorWhite;
         fill: $colorWhite;
-        padding-left: 3rem;
+        padding-left: 2rem;
 
     }
     &__name {
         color: inherit;
         text-transform: uppercase;
-        font-weight: 700;
+        font-weight: 500;
         line-height: 4rem;
         display: block;
 

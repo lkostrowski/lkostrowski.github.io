@@ -1,7 +1,7 @@
 .filter-name {
   background-color: #151515;
   color: #495154;
-  padding: 0 4rem;
+  padding: 0 3rem;
   fill: #495154;
   display: flex;
   justify-content: space-between;
@@ -11,10 +11,10 @@
     background: #222;
     color: #fff;
     fill: #fff;
-    padding-left: 3rem; }
+    padding-left: 2rem; }
   .filter-name__name {
     color: inherit;
     text-transform: uppercase;
-    font-weight: 700;
+    font-weight: 500;
     line-height: 4rem;
     display: block; }

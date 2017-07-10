@@ -1,6 +1,7 @@
 import  React from 'react';
+import propTypes from 'prop-types';
 
-export default ({className, fill, x}) => {
+const IconPlus = ({className, fill, x}) => {
     let style = {};
 
     if (x) {
@@ -19,4 +20,12 @@ export default ({className, fill, x}) => {
                   fill={fill || '#fff'}/>
         </svg>
     )
-}
+};
+
+IconPlus.propTypes = {
+    className: propTypes.string,
+    fill: propTypes.string,
+    x: propTypes.bool
+};
+
+export default IconPlus;
