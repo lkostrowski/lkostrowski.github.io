@@ -1,0 +1,20 @@
+.filter-name {
+  background-color: #151515;
+  color: #495154;
+  padding: 0 4rem;
+  fill: #495154;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  .filter-name--active {
+    border-left: 1rem solid #b0502a;
+    background: #222;
+    color: #fff;
+    fill: #fff;
+    padding-left: 3rem; }
+  .filter-name__name {
+    color: inherit;
+    text-transform: uppercase;
+    font-weight: 700;
+    line-height: 4rem;
+    display: block; }

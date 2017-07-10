@@ -4,8 +4,12 @@
   min-height: 100vh; }
   .app__sidebar {
     width: 30rem;
+    flex: 0 0 30rem;
     background: #151515; }
   .app__main {
     flex-grow: 1; }
   .app__content {
-    padding: 4rem; }
+    padding: 4rem;
+    max-height: calc(100vh - 6rem);
+    overflow: scroll;
+    position: relative; }

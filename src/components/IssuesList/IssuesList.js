@@ -31,6 +31,126 @@ const dummyIssues = [
         metadata: {
             title: 'Punisher MAX #1'
         }
+    },{
+        cover: {
+            src: cover1,
+            alt: ''
+        },
+        metadata: {
+            title: 'Batman #1 - The Joker'
+        }
+    }, {
+        cover: {
+            src: cover2,
+            alt: ''
+        },
+        metadata: {
+            title: 'Wonder Woman #5 Temiscera'
+        }
+    }, {
+        cover: {
+            src: cover3,
+            alt: ''
+        },
+        metadata: {
+            title: 'Punisher MAX #1'
+        }
+    },{
+        cover: {
+            src: cover1,
+            alt: ''
+        },
+        metadata: {
+            title: 'Batman #1 - The Joker'
+        }
+    }, {
+        cover: {
+            src: cover2,
+            alt: ''
+        },
+        metadata: {
+            title: 'Wonder Woman #5 Temiscera'
+        }
+    }, {
+        cover: {
+            src: cover3,
+            alt: ''
+        },
+        metadata: {
+            title: 'Punisher MAX #1'
+        }
+    }, {
+        cover: {
+            src: cover1,
+            alt: ''
+        },
+        metadata: {
+            title: 'Batman #1 - The Joker'
+        }
+    }, {
+        cover: {
+            src: cover2,
+            alt: ''
+        },
+        metadata: {
+            title: 'Wonder Woman #5 Temiscera'
+        }
+    }, {
+        cover: {
+            src: cover3,
+            alt: ''
+        },
+        metadata: {
+            title: 'Punisher MAX #1'
+        }
+    },{
+        cover: {
+            src: cover1,
+            alt: ''
+        },
+        metadata: {
+            title: 'Batman #1 - The Joker'
+        }
+    }, {
+        cover: {
+            src: cover2,
+            alt: ''
+        },
+        metadata: {
+            title: 'Wonder Woman #5 Temiscera'
+        }
+    }, {
+        cover: {
+            src: cover3,
+            alt: ''
+        },
+        metadata: {
+            title: 'Punisher MAX #1'
+        }
+    },{
+        cover: {
+            src: cover1,
+            alt: ''
+        },
+        metadata: {
+            title: 'Batman #1 - The Joker'
+        }
+    }, {
+        cover: {
+            src: cover2,
+            alt: ''
+        },
+        metadata: {
+            title: 'Wonder Woman #5 Temiscera'
+        }
+    }, {
+        cover: {
+            src: cover3,
+            alt: ''
+        },
+        metadata: {
+            title: 'Punisher MAX #1'
+        }
     },
 ];
 

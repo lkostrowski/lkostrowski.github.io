@@ -1,0 +1,26 @@
+@import "../../utils/colors.scss";
+
+.filter-results {
+    background: $colorGrayMid;
+    list-style: none outside;
+    margin: 0;
+    padding: 2rem 0;
+
+
+    &__item {
+        height: 5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 4rem;
+    }
+
+    &__label {
+        color: $colorWhite;
+        font-size: 1.2rem;
+    }
+
+    &__icon {
+
+    }
+}
