@@ -4,6 +4,8 @@ import Sidebar from "../../components/Sidebar/Sidebar";
 import IssuesList from "../../components/IssuesList/IssuesList";
 import SearchBar from "../../components/SearchBar/SearchBar";
 
+import getIssues from '../../services/IssuesProvider.dummy';
+
 class Shelf extends Component {
     render() {
         return (
@@ -14,7 +16,7 @@ class Shelf extends Component {
                 <div className="shelf__main">
                     <SearchBar/>
                     <div className="shelf__content">
-                        <IssuesList/>
+                        <IssuesList issues={getIssues()}/>
                     </div>
                 </div>
             </div>

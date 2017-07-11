@@ -6,7 +6,9 @@ import IconMinus from '../Icons/IconMinus';
 
 import './FilterName.css';
 
-export default ({name, active}) => {
+import PT from 'prop-types';
+
+const FilterName = ({name, active}) => {
     const nameClasses = classNames({
         'filter-name': true,
         'filter-name--active': active
@@ -22,4 +24,11 @@ export default ({name, active}) => {
                 <IconMinus fill="inherit" className="filter-name__icon filter-name__icon--minus"/>}
         </div>
     )
-}
+};
+
+FilterName.propTypes = {
+    name: PT.string.isRequired,
+    active: PT.bool
+};
+
+export default FilterName;

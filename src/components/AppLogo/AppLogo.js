@@ -1,8 +1,11 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 import './AppLogo.css';
 
 export default (props) => (
-    <div className="app-logo">
-        COMICARY
-    </div>
+    <Link to="/">
+        <div className="app-logo">
+            COMICARY
+        </div>
+    </Link>
 )

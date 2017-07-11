@@ -13,7 +13,7 @@ export default class MainSearch extends React.Component {
     }
 
     setInputState(e) {
-        const isInputActive = e.target.value.length
+        const isInputActive = e.target.value.length;
 
         this.setState({inputActive: isInputActive});
     }
