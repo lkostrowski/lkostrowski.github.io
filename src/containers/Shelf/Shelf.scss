@@ -2,8 +2,7 @@
 
 .shelf {
     display: flex;
-    background-color: $colorBg;
-    min-height: 100vh;
+    min-height: calc(100vh - 6rem);
 
     &__sidebar {
         width: 30rem;

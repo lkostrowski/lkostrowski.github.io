@@ -1,7 +1,6 @@
 .shelf {
   display: flex;
-  background-color: #202d39;
-  min-height: 100vh; }
+  min-height: calc(100vh - 6rem); }
   .shelf__sidebar {
     width: 30rem;
     flex: 0 0 30rem;

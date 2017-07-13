@@ -1,0 +1,10 @@
+.header {
+    display: flex;
+
+    &__logo {
+        flex: 0 0 30rem;
+    }
+    &__search {
+        flex: 1 1 auto;
+    }
+}
