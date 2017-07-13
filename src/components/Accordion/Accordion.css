@@ -1,0 +1,5 @@
+.accordion__bar {
+  cursor: pointer; }
+
+.accordion__content--closed {
+  display: none; }

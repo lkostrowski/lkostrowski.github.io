@@ -1,0 +1,18 @@
+.info-accordion__label {
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 500;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  display: flex;
+  height: 5rem;
+  align-items: center;
+  justify-content: space-between;
+  fill: #fff; }
+  .info-accordion__label--active {
+    border-bottom: 2px solid #ef662f;
+    fill: #ef662f; }
+
+.info-accordion__entry {
+  color: #fff;
+  padding: 1rem 0; }

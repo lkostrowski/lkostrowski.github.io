@@ -8,8 +8,8 @@ const IssuesList = ({issues}) => {
     return (
         <ul className="issues-list">
             {issues.map((issue, key) => (
-                <Link to={`/issue/${issue.id}`}>
-                <Issue className="issues-list__issue" {...issue} key={key}/>
+                <Link to={`/issue/${issue.id}`} key={key}>
+                    <Issue className="issues-list__issue" {...issue}/>
                 </Link>
             ))}
         </ul>

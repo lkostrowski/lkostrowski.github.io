@@ -7,7 +7,9 @@ import './CoversSwitcher.css';
 const carouselSettings = {
     swipe: true,
     arrows: false,
-    dots: true
+    dots: true,
+    slidesToShow: 1,
+    slidesToScroll: 1
 };
 
 const CoversSwitcher = ({covers}) => {

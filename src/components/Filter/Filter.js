@@ -1,5 +1,5 @@
 import React from 'react';
-import FilterAccordion from '../FilterAccordion/FilterAccordion';
+import Accordion from '../Accordion/Accordion';
 import FilterName from '../FilterName/FilterName';
 import FilterResults from '../FilterResults/FilterResults';
 import PT from 'prop-types'
@@ -32,12 +32,12 @@ class Filter extends React.Component {
 
     render() {
         return (
-            <FilterAccordion isOpen={this.props.open}
-                             onOpen={() => this.opened()}
-                             onClose={() => this.closed()}
-                             bar={<FilterName active={this.state.active} name={this.props.filterName}/>}
-                             content={<FilterResults onChange={(item) => this.onItemClicked(item)}
-                                                     items={this.props.filterItems}/>}/>
+            <Accordion isOpen={this.state.active}
+                       onOpen={() => this.opened()}
+                       onClose={() => this.closed()}
+                       bar={<FilterName active={this.state.active} name={this.props.filterName}/>}
+                       content={<FilterResults onChange={(item) => this.onItemClicked(item)}
+                                               items={this.props.filterItems}/>}/>
 
         )
     }

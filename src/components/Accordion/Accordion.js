@@ -1,15 +1,11 @@
 import React from 'react';
 import propTypes from 'prop-types';
 import classNames from 'class-names';
-import './FilterAccordion.css';
+import './Accordion.css';
 
-class FilterAccordion extends React.Component {
+class Accordion extends React.Component {
     constructor(props) {
         super(props);
-
-        this.state = {
-            isOpen: props.isOpen || false
-        };
 
         const noop = () => {
         };
@@ -21,37 +17,34 @@ class FilterAccordion extends React.Component {
     }
 
     open() {
-        this.setState({isOpen: true});
         this.onOpen();
-        this.onChange(this.state.isOpen);
+        this.onChange(true);
 
     }
 
     close() {
-        this.setState({isOpen: false});
         this.onClose();
-        this.onChange(this.state.isOpen);
+        this.onChange(false);
 
     }
 
     toggle() {
-        if (this.state.isOpen) {
+        if (this.props.isOpen) {
             this.close();
         } else {
             this.open();
         }
-        this.onChange(this.state.isOpen);
     }
 
     render() {
         const contentClass = classNames({
-            'filter-accordion__content': true,
-            'filter-accordion__content--closed': !this.state.isOpen
+            'accordion__content': true,
+            'accordion__content--closed': !this.props.isOpen
         });
 
         return (
-            <div className="filter-accordion">
-                <div className="filter-accordion__bar" onClick={() => this.toggle()}>
+            <div className="accordion">
+                <div className="accordion__bar" onClick={() => this.toggle()}>
                     {this.props.bar}
                 </div>
                 <div className={contentClass}>
@@ -62,7 +55,7 @@ class FilterAccordion extends React.Component {
     }
 }
 
-FilterAccordion.propTypes = {
+Accordion.propTypes = {
     isOpen: propTypes.bool,
     bar: propTypes.element.isRequired,
     content: propTypes.element.isRequired,
@@ -71,4 +64,4 @@ FilterAccordion.propTypes = {
     onChange: propTypes.func
 };
 
-export default FilterAccordion;
+export default Accordion;

@@ -1,0 +1,35 @@
+@import "../../utils/colors.scss";
+
+.info-accordion {
+    &__label {
+        color: $colorWhite;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-weight: 500;
+        border-bottom: 1px solid rgba($colorWhite, 0.3);
+        display: flex;
+        height: 5rem;
+        align-items: center;
+        justify-content: space-between;
+        fill: $colorWhite;
+
+        &--active {
+            border-bottom: 2px solid $colorBase;
+            fill: $colorBase;
+        }
+    }
+
+    &__label-text {
+    }
+
+    &__label-icon {
+    }
+
+    &__content {}
+
+    &__entry {
+        color: $colorWhite;
+        padding: 1rem 0;
+    }
+
+}
