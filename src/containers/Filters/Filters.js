@@ -13,8 +13,8 @@ class Filters extends React.Component {
         this.props.onFilterClosed(filterId);
     }
 
-    itemChangedHandler(item) {
-        console.log(item)
+    itemChangedHandler(itemId, filterId) {
+        this.props.onItemToggled(filterId, itemId);
     }
 
     render() {
@@ -27,7 +27,7 @@ class Filters extends React.Component {
                                 open={filter.open}
                                 onOpened={id => this.filterOpened(id)}
                                 onClosed={id => this.filterClosed(id)}
-                                onResultsChanged={resultItem => this.itemChangedHandler(resultItem) }
+                                onResultsChanged={resultItem => this.itemChangedHandler(resultItem, filter.id) }
                                 filterName={filter.name}
                                 filterItems={filter.items}
                         />
@@ -41,7 +41,8 @@ class Filters extends React.Component {
 Filters.propTypes = {
     filters: PT.array.isRequired,
     onFilterOpened: PT.func.isRequired,
-    onFilterClosed: PT.func.isRequired
+    onFilterClosed: PT.func.isRequired,
+    onItemToggled: PT.func.isRequired
 };
 
 function mapStateToProps(state) {
@@ -53,7 +54,8 @@ function mapStateToProps(state) {
 const mapDispatchToProps = (dispatch) => {
     return {
         onFilterOpened: (id) => dispatch(actions.open(id)),
-        onFilterClosed: (id) => dispatch(actions.close(id))
+        onFilterClosed: (id) => dispatch(actions.close(id)),
+        onItemToggled: (filterId, itemId) => dispatch(actions.toggleItem(filterId, itemId))
     }
 };
 

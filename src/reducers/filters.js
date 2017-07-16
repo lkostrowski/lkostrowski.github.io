@@ -21,6 +21,19 @@ const filtersState = (state = initialState, action) => {
 
                 return filter;
             });
+        case CONSTANTS.TOGGLE_FILTER_ITEM:
+            return state.map(filter => {
+                if (filter.id === action.filterId) {
+                    filter.items.map(item => {
+                        if (item.id === action.itemId) {
+                            item.selected = !item.selected;
+                        }
+                        return item;
+                    })
+                }
+
+                return filter;
+            });
         default:
             return state;
     }

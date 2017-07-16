@@ -14,7 +14,7 @@ const FilterResults = ({
     }
 
     function clickHandler(event, item) {
-        onChange(Object.assign({}, item, {selected: !item.selected}));
+        onChange(item.id);
     }
 
     function renderItem(item, i) {

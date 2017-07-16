@@ -1,6 +1,7 @@
 const types = {
     OPEN: 'OPEN',
-    CLOSE: 'CLOSE'
+    CLOSE: 'CLOSE',
+    TOGGLE_FILTER_ITEM: 'TOGGLE_FILTER_ITEM',
 };
 
 function openFilter(filterId) {
@@ -17,9 +18,18 @@ function closeFilter(filterId) {
     }
 }
 
+function toggleFilterItem(filterId, itemId) {
+    return {
+        type: types.TOGGLE_FILTER_ITEM,
+        filterId: filterId,
+        itemId: itemId
+    }
+}
+
 export default {
     open: openFilter,
-    close: closeFilter
+    close: closeFilter,
+    toggleItem: toggleFilterItem
 };
 
 export {types as CONSTANTS};
