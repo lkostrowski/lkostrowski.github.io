@@ -14,19 +14,20 @@ function toggleHandler(dispatch) {
 
 }
 
-const Sidebar = ({open = true, children, dispatch}) => (
+const Sidebar = ({open = true, children, dispatch, canBeClosed = false}) => (
     <div className="sidebar">
-        <button className="sidebar__toggle-button" onClick={() => toggleHandler(dispatch)}>
+        {canBeClosed && <button className="sidebar__toggle-button" onClick={() => toggleHandler(dispatch)}>
             {open ?
                 <IconMinus fill="inherit"/> :
                 <IconPlus fill="inherit"/> }
-        </button>
+        </button>}
         {open && children}
     </div>
 );
 
 Sidebar.propTypes = {
-    open: PT.bool
+    open: PT.bool,
+    canBeClosed: PT.bool
 };
 
 export default connect()(Sidebar);

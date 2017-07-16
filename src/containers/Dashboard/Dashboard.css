@@ -1,0 +1,15 @@
+.dashboard {
+  display: flex;
+  min-height: calc(100vh - 6rem); }
+  .dashboard__sidebar {
+    width: 30rem;
+    flex: 0 0 30rem;
+    background: #151515;
+    padding-top: 3rem; }
+  .dashboard__main {
+    flex-grow: 1;
+    position: relative; }
+  .dashboard__content {
+    padding: 4rem;
+    max-height: calc(100vh - 6rem);
+    overflow: scroll; }

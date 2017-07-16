@@ -4,6 +4,7 @@ import './App.css';
 import Header from "../../components/Header/Header";
 import Shelf from "../Shelf/Shelf";
 import IssueView from "../IssueView/IssueView";
+import Dashboard from "../Dashboard/Dashboard";
 
 import {
     BrowserRouter as Router,
@@ -20,7 +21,8 @@ class App extends Component {
                 <Router>
                     <div className="app">
                         <Header/>
-                        <Route exact path="/" component={Shelf}/>
+                        <Route exact path="/" component={Dashboard}/>
+                        <Route exact path="/shelf" component={Shelf}/>
                         <Route path="/issue/:id" component={IssueView}/>
                     </div>
                 </Router>

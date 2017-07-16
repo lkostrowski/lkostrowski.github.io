@@ -16,7 +16,7 @@ class Shelf extends Component {
         return (
             <div className="shelf">
                 <div className={`shelf__sidebar ${this.props.sidebarOpen ? '' : 'shelf__sidebar--closed'}`}>
-                    <Sidebar open={this.props.sidebarOpen}>
+                    <Sidebar canBeClosed={true} open={this.props.sidebarOpen}>
                         <FilterSearch className="shelf__search"/>
                         <Filters/>
                     </Sidebar>
