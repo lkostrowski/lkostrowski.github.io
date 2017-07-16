@@ -4,9 +4,9 @@ import './IssuesList.css';
 import PT from 'prop-types';
 import {Link} from "react-router-dom";
 
-const IssuesList = ({issues}) => {
+const IssuesList = ({issues, wide}) => {
     return (
-        <ul className="issues-list">
+        <ul className={`issues-list ${wide? 'issues-list--wide' : ''}`}>
             {issues.map((issue, key) => (
                 <Link to={`/issue/${issue.id}`} key={key}>
                     <Issue className="issues-list__issue" {...issue}/>
@@ -26,7 +26,8 @@ IssuesList.propTypes = {
             title: PT.string.isRequired
         }),
         id: PT.number.isRequired
-    }))
+    })),
+    wide: PT.bool
 };
 
 export default IssuesList;

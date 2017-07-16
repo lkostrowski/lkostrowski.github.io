@@ -4,7 +4,11 @@
   .shelf__sidebar {
     width: 30rem;
     flex: 0 0 30rem;
-    background: #151515; }
+    background: #151515;
+    padding-top: 3rem; }
+    .shelf__sidebar--closed {
+      width: 5rem;
+      flex: 0 0 5rem; }
   .shelf__main {
     flex-grow: 1;
     position: relative; }
@@ -22,4 +26,4 @@
     max-height: calc(100vh - 6rem);
     overflow: scroll; }
   .shelf__search {
-    margin: 3rem 3rem; }
+    margin: 0 3rem 3rem; }

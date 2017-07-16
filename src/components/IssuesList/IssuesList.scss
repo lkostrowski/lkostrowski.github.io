@@ -8,6 +8,11 @@
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-gap: 4rem;
 
+    &--wide {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+
+    }
+
     &__issue {
 
     }

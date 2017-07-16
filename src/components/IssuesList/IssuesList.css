@@ -5,3 +5,5 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-gap: 4rem; }
+  .issues-list--wide {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; }
