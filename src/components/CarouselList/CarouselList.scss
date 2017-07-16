@@ -1,0 +1,10 @@
+@import "../../utils/colors.scss";
+@import "../../utils/mixins.scss";
+
+.carousel-list {
+    &__headline {
+        @include resetHeadline();
+        margin-bottom: 2rem;
+    }
+
+}

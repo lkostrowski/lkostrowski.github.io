@@ -8,7 +8,8 @@
     padding-top: 3rem; }
   .dashboard__main {
     flex-grow: 1;
-    position: relative; }
+    position: relative;
+    overflow-x: hidden; }
   .dashboard__content {
     padding: 4rem;
     max-height: calc(100vh - 6rem);

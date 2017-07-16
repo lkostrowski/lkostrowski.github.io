@@ -1,3 +1,5 @@
+@import "./colors.scss";
+
 @mixin resetList() {
     margin: 0;
     padding: 0;
@@ -10,4 +12,11 @@
     border: none;
     outline: none;
     background-color: transparent;
+}
+
+@mixin resetHeadline() {
+    margin: 0;
+    color: $colorWhite;
+    font-weight: 500;
+    text-transform: uppercase;
 }

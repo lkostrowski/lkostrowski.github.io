@@ -15,6 +15,7 @@
     &__main {
         flex-grow: 1;
         position: relative;
+        overflow-x: hidden;
     }
 
     &__content {

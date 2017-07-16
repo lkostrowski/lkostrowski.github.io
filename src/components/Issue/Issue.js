@@ -1,9 +1,9 @@
 import React from 'react';
 import './Issue.css';
 
-import PT from 'prop-types';
+import IssueInterface from './../../interfaces/SingleIssue';
 
-const Issue = ({cover, metadata, className}) => {
+const Issue = ({cover, metadata, className = ''}) => {
     return (
         <div className={"issue " + className }>
             <img src={cover.src} alt={cover.alt} className="issue__cover"/>
@@ -16,13 +16,4 @@ const Issue = ({cover, metadata, className}) => {
 
 export default Issue;
 
-Issue.propTypes = {
-    cover: PT.shape({
-        src:  PT.string.isRequired,
-        alt:  PT.string
-    }),
-    metadata: PT.shape({
-        title: PT.string.isRequired
-    }),
-    className: PT.string
-};
+Issue.propTypes = IssueInterface;

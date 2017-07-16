@@ -4,6 +4,8 @@ import './IssuesList.css';
 import PT from 'prop-types';
 import {Link} from "react-router-dom";
 
+import singleIssueInterface from '../../interfaces/SingleIssue';
+
 const IssuesList = ({issues, wide}) => {
     return (
         <ul className={`issues-list ${wide? 'issues-list--wide' : ''}`}>
@@ -17,16 +19,7 @@ const IssuesList = ({issues, wide}) => {
 };
 
 IssuesList.propTypes = {
-    issues: PT.arrayOf(PT.shape({
-        cover: PT.shape({
-            src: PT.string.isRequired,
-            alt: PT.string
-        }),
-        metadata: PT.shape({
-            title: PT.string.isRequired
-        }),
-        id: PT.number.isRequired
-    })),
+    issues: PT.arrayOf(PT.shape(singleIssueInterface)),
     wide: PT.bool
 };
 
