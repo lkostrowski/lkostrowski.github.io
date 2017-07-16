@@ -5,13 +5,16 @@ import IconPlus from '../Icons/IconPlus'
 import './FilterResults.css';
 
 
-const FilterResults = ({ items, onChange = () => {} }) => {
+const FilterResults = ({
+                           items, onChange = () => {
+    }
+                       }) => {
     function getItemClass(item) {
         return item.selected ? 'filter-results__item filter-results__item--selected' : 'filter-results__item';
     }
 
     function clickHandler(event, item) {
-        onChange(item);
+        onChange(Object.assign({}, item, {selected: !item.selected}));
     }
 
     function renderItem(item, i) {
