@@ -5,6 +5,7 @@ import './IssueView.css';
 import getIssueData from '../../services/SingleIssue.dummy';
 import Sidebar from "../../components/Sidebar/Sidebar";
 import IssueDescription from "../../components/IssueDescription/IssueDescription";
+import Rating from "../../components/Rating/Rating";
 
 class IssueView extends Component {
     getBackgroundStyle() {
@@ -20,7 +21,7 @@ class IssueView extends Component {
             <div className="issue-view">
                 <div className="issue-view__sidebar">
                     <Sidebar>
-                        asd
+                        <Rating />
                     </Sidebar>
                 </div>
                 <div className="issue-view__main" >

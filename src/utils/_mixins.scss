@@ -1,0 +1,13 @@
+@mixin resetList() {
+    margin: 0;
+    padding: 0;
+    list-style: none outside;
+}
+
+@mixin resetButton() {
+    padding: 0;
+    margin: 0;
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
