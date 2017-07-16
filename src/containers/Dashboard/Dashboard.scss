@@ -8,7 +8,6 @@
         width: 30rem;
         flex: 0 0 30rem;
         background: $colorBlack;
-        padding-top: 3rem;
 
     }
 
@@ -23,5 +22,10 @@
         max-height: calc(100vh - 6rem);
         overflow: scroll;
 
+    }
+
+    // Should be in button component?
+    &__menu-link{
+        display: block;
     }
 }

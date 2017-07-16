@@ -1,0 +1,19 @@
+@import "../../utils/mixins.scss";
+@import "../../utils/colors.scss";
+
+.menu-item {
+    @include resetButton();
+    height: 5rem;
+    display: flex;
+    background-color: $colorGrayMid;
+    padding: 0 2rem;
+    width: 100%;
+    cursor: pointer;
+
+    &__label {
+        color: $colorWhite;
+        text-transform: uppercase;
+        font-weight: 500;
+        font-size: 1.6rem;
+    }
+}

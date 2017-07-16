@@ -17,10 +17,14 @@
     display: flex;
     justify-content: space-between; }
   .rating__point {
-    cursor: pointer; }
+    cursor: pointer;
+    flex: 1 1 auto; }
   .rating__point-button {
     padding: 0;
     margin: 0;
     border: none;
     outline: none;
-    background-color: transparent; }
+    background-color: transparent;
+    width: 100%; }
+    .rating__point-button--active {
+      color: red; }

@@ -16,12 +16,19 @@ class IssueView extends Component {
         }
     }
 
+    // temp
+    ratingSetHandler(points) {
+        console.log(points);
+
+        // move to higher order service or shit
+    }
+
     render() {
         return (
             <div className="issue-view">
                 <div className="issue-view__sidebar">
                     <Sidebar>
-                        <Rating />
+                        <Rating onRatingSet={(points) => this.ratingSetHandler(points)} />
                     </Sidebar>
                 </div>
                 <div className="issue-view__main" >
