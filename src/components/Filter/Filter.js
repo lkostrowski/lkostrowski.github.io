@@ -5,42 +5,45 @@ import FilterResults from '../FilterResults/FilterResults';
 import PT from 'prop-types'
 import './Filter.css'
 
-class Filter extends React.Component {
+const Filter = (props) => {
 
-    filterChangeHandler(val) {
-        this.setState({active: val});
+    const {
+        filterName,
+        filterItems,
+        open,
+        id,
+        onOpened = () => {
+        },
+        onClosed = () => {
+        },
+        onResultsChanged = () => {
+        }
+    } = props;
+
+    function opened() {
+        onOpened(id);
     }
 
-    opened() {
-        this.setState({active: true});
-
-
-        this.props.accordionToggled({open: true});
+    function closed() {
+        onClosed(id);
     }
 
-    closed() {
-        this.setState({active: false});
-
-        this.props.accordionToggled({open: false});
+    function itemClicked(item) {
+        onResultsChanged(item);
     }
 
-    onItemClicked(item) {
-        this.props.filterChanged(item);
-    }
+    return (
+        <Accordion isOpen={open}
+                   onOpen={() => opened()}
+                   onClose={() => closed()}
+                   bar={<FilterName active={open}
+                                    name={filterName}/>}
+                   content={<FilterResults onChange={(item) => itemClicked(item)}
+                                           items={filterItems}/>}/>
 
-    render() {
-        return (
-            <Accordion isOpen={this.props.open}
-                       onOpen={() => this.opened()}
-                       onClose={() => this.closed()}
-                       bar={<FilterName active={this.props.open}
-                                        name={this.props.filterName}/>}
-                       content={<FilterResults onChange={(item) => this.onItemClicked(item)}
-                                               items={this.props.filterItems}/>}/>
+    )
 
-        )
-    }
-}
+};
 
 Filter.propTypes = {
     filterName: PT.string.isRequired,
@@ -49,9 +52,11 @@ Filter.propTypes = {
         id: PT.string.isRequired,
         selected: PT.bool
     })).isRequired,
-    open: PT.bool,
-    filterChanged: PT.func,
-    accordionToggled: PT.func
+    open: PT.bool.isRequired,
+    id: PT.number.isRequired,
+    onOpened: PT.func,
+    onClosed: PT.func,
+    onResultsChanged: PT.func
 };
 
 export default Filter;

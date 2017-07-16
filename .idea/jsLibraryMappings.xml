@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="JavaScriptLibraryMappings">
-    <file url="PROJECT" libraries="{react-router-dom-DefinitelyTyped}" />
+    <file url="PROJECT" libraries="{react-redux-DefinitelyTyped, react-router-dom-DefinitelyTyped}" />
   </component>
 </project>

@@ -1,98 +1,36 @@
 import React from 'react';
 import Filter from '../../components/Filter/Filter';
-
-// temp
-const filters = [
-    {
-        open: true,
-        name: 'Author',
-        items: [
-            {
-                label: 'Frank Miller',
-                id: '1',
-                selected: true
-            },
-            {
-                label: 'Greg Rucka',
-                id: '2',
-                selected: false
-            },
-            {
-                label: 'Garth Ennis',
-                id: '3',
-                selected: false
-            }
-        ]
-    },
-    {
-        name: 'Genre',
-        items: [
-            {
-                label: 'Superhero',
-                id: '4',
-                selected: true
-            },
-            {
-                label: 'Crime',
-                id: '6',
-                selected: false
-            },
-            {
-                label: 'Noir',
-                id: '11',
-                selected: false
-            }
-        ]
-    }
-];
+import PT from 'prop-types';
+import {connect} from "react-redux";
+import actions from '../../actions/filters';
 
 class Filters extends React.Component {
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            filters: filters
-        };
-
+    filterOpened(filterId) {
+        this.props.onFilterOpened(filterId);
     }
 
-    changeHandler(item) {
-        const newState = Object.assign({}, this.state);
-
-        newState.filters.map(filter => {
-            filter.items.map(currentItem => {
-                if (item.id === currentItem.id) {
-                    currentItem.selected = item.selected;
-                }
-
-                return currentItem;
-            });
-
-            return filter;
-        });
-
-        this.setState({filters: newState.filters})
+    filterClosed(filterId) {
+        this.props.onFilterClosed(filterId);
     }
 
-    toggleHandler(open, index) {
-        const newState = Object.assign({}, this.state);
-
-        newState.filters[index].open = open;
-
-        this.setState({filters: newState.filters});
+    itemChangedHandler(item) {
+        console.log(item)
     }
 
     render() {
         return (
             <div className="filters">
-                {this.state.filters.map((filter, i) => {
+                {this.props.filters.map((filter, i) => {
                     return (
-                        <Filter filterChanged={(item) => this.changeHandler(item)}
+                        <Filter id={filter.id}
                                 key={i}
                                 open={filter.open}
-                                accordionToggled={({open, index}) => this.toggleHandler(open, i) }
+                                onOpened={id => this.filterOpened(id)}
+                                onClosed={id => this.filterClosed(id)}
+                                onResultsChanged={resultItem => this.itemChangedHandler(resultItem) }
                                 filterName={filter.name}
-                                filterItems={filter.items}/>
+                                filterItems={filter.items}
+                        />
                     )
                 })}
             </div>
@@ -100,4 +38,23 @@ class Filters extends React.Component {
     }
 }
 
-export default Filters;
+Filters.propTypes = {
+    filters: PT.array.isRequired,
+    onFilterOpened: PT.func.isRequired,
+    onFilterClosed: PT.func.isRequired
+};
+
+function mapStateToProps(state) {
+    return {
+        filters: state.filters
+    }
+}
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        onFilterOpened: (id) => dispatch(actions.open(id)),
+        onFilterClosed: (id) => dispatch(actions.close(id))
+    }
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Filters);
